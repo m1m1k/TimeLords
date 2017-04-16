@@ -107,36 +107,36 @@ Now, to find some future people and help me get out of here.
 
 ## 2017 ROAD MAP
 # Phase 1
-*0.1 Get a Working Game Engine - Unity3D and C# *
-0.1.1 Player can move and attack 8 directions
-0.1.2 Test level created 
-0.1.3 hard-coded level, creatures/enemy interact with player + fighting engine
-0.1.4 DOORS : moving between rooms
-0.1.5 STAIRS : moving between levels
-0.1.6 CHESTS & COLLECTIONS : treasure & motivation
-0.1.7 TRAPS, HOLES, NATURAL DISASTERS
-0.1.8 Food + Water system
-0.1.9 GUI HUD Phase 1
+  - 0.1 Get a Working Game Engine - Unity3D and C# *
+  - 0.1.1 Player can move and attack 8 directions
+  - 0.1.2 Test level created 
+  - 0.1.3 hard-coded level, creatures/enemy interact with player + fighting engine
+  - 0.1.4 DOORS : moving between rooms
+  - 0.1.5 STAIRS : moving between levels
+  - 0.1.6 CHESTS & COLLECTIONS : treasure & motivation
+  - 0.1.7 TRAPS, HOLES, NATURAL DISASTERS
+  - 0.1.8 Food + Water system
+  - 0.1.9 GUI HUD Phase 1
 
-0.1.x Play testing & feedback?
+  - 0.1.x Play testing & feedback?
 
 ------------------------------
 
 # Phase 2
-0.2.0 Work more on Town/Dungeon creation. flesh out architecture styles, special locations
-0.2.1 Enemy generation, as it relates to your level & where it's at on map. 
-(use sql D&D sqllite DB) -- block ppl from entering? LVLX Door guards LVLX monster guards LVLX treasure.
-0.2.2 PORTALS/edge : moving between towns, permissions
-0.2.3 NPC + Story + Scripting engine (consider other tools? - 
-pick from pre-gen or create treasure hunts from existing) - going for familiar grounds, yet some replayability...
-0.2.4 HUD Phase 2
-0.2.5 sound effects, music, ambiance
-0.2.6 Think more about motivations - 
-	(D)Dominance/ruling (can NPC's be tricked? stolen from? made to do one's bidding?), 
-	(C)Collecting + Achieving, defending?
-	(I)Social, fun
-	(S)Exploration, Helping others, defending others?
-0.2.7 work on fighting engine (use 5th edition / D20 rules?)
+  - 0.2.0 Work more on Town/Dungeon creation. flesh out architecture styles, special locations
+  - 0.2.1 Enemy generation, as it relates to your level & where it's at on map. 
+  - (use sql D&D sqllite DB) -- block ppl from entering? LVLX Door guards LVLX monster guards LVLX treasure.
+  - 0.2.2 PORTALS/edge : moving between towns, permissions
+  - 0.2.3 NPC + Story + Scripting engine (consider other tools? - 
+  - pick from pre-gen or create treasure hunts from existing) - going for familiar grounds, yet some replayability...
+  - 0.2.4 HUD Phase 2
+  - 0.2.5 sound effects, music, ambiance
+  - 0.2.6 Think more about motivations - 
+  - 	(D)Dominance/ruling (can NPC's be tricked? stolen from? made to do one's bidding?), 
+  - 	(C)Collecting + Achieving, defending?
+  - 	(I)Social, fun
+  - 	(S)Exploration, Helping others, defending others?
+  - 0.2.7 work on fighting engine (use 5th edition / D20 rules?)
 
-0.1.x Play testing & feedback?
+  - 0.2.x Play testing & feedback?
 
