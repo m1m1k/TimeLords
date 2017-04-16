@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.UI;   //Allows us to use UI.
 using UnityEngine.SceneManagement;
 
-namespace Completed
+namespace TimeLords
 {
 	//Player inherits from MovingObject, our base class for objects that can move, Enemy also inherits from this.
 	public class Player : MovingObject
@@ -32,8 +32,8 @@ namespace Completed
 			//Get a component reference to the Player's animator component
 			animator = GetComponent<Animator>();
 			
-			//Get the current food point total stored in GameManager.instance between levels.
-			food = GameManager.instance.playerFoodPoints;
+			//Get the current food point total stored in GameManager.Instance between levels.
+			food = GameManager.Instance.playerFoodPoints;
 			
 			//Set the foodText to reflect the current player food total.
 			foodText.text = "Food: " + food;
@@ -47,14 +47,14 @@ namespace Completed
 		private void OnDisable ()
 		{
 			//When Player object is disabled, store the current local food total in the GameManager so it can be re-loaded in next level.
-			GameManager.instance.playerFoodPoints = food;
+			GameManager.Instance.playerFoodPoints = food;
 		}
 		
 		
 		private void Update ()
 		{
 			//If it's not the player's turn, exit the function.
-			if(!GameManager.instance.playersTurn) return;
+			if(!GameManager.Instance.playersTurn) return;
 			
 			int horizontal = 0;  	//Used to store the horizontal move direction.
 			int vertical = 0;		//Used to store the vertical move direction.
@@ -151,7 +151,7 @@ namespace Completed
 			CheckIfGameOver ();
 			
 			//Set the playersTurn boolean of GameManager to false now that players turn is over.
-			GameManager.instance.playersTurn = false;
+			GameManager.Instance.playersTurn = false;
 		}
 		
 		
@@ -258,7 +258,7 @@ namespace Completed
 				SoundManager.instance.musicSource.Stop();
 				
 				//Call the GameOver function of GameManager.
-				GameManager.instance.GameOver ();
+				GameManager.Instance.GameOver ();
 			}
 		}
 	}

@@ -1,17 +1,33 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-namespace Completed
+namespace TimeLords
 {
-	using System.Collections.Generic;		//Allows us to use Lists. 
+    using System;
+    using System.Collections.Generic;		//Allows us to use Lists. 
 	using UnityEngine.UI;					//Allows us to use UI.
 	
 	public class GameManager : MonoBehaviour
 	{
-		public float levelStartDelay = 2f;						//Time to wait before starting level, in seconds.
+        /// <summary>
+        /// Make GameManager a SingleTon
+        /// </summary>
+        private static readonly Lazy<GameManager> _mySingleton = new Lazy<GameManager>(() => new GameManager());
+        private GameManager() { }
+        public static GameManager Instance
+        {
+            get
+            {
+                return _mySingleton.Value;
+            }
+        }
+
+        public float levelStartDelay = 2f;						//Time to wait before starting level, in seconds.
 		public float turnDelay = 0.1f;							//Delay between each Player turn.
-		public int playerFoodPoints = 100;						//Starting value for Player food points.
-		public static GameManager instance = null;				//Static instance of GameManager which allows it to be accessed by any other script.
+		public int playerFoodPoints = 100;                      //Starting value for Player food points.
+
+        
+
 		[HideInInspector] public bool playersTurn = true;		//Boolean to check if it's players turn, hidden in inspector but public.
 		
 		
@@ -28,18 +44,6 @@ namespace Completed
 		//Awake is always called before any Start functions
 		void Awake()
 		{
-			//Check if instance already exists
-			if (instance == null)
-				
-				//if not, set instance to this
-				instance = this;
-			
-			//If instance already exists and it's not this:
-			else if (instance != this)
-				
-				//Then destroy this. This enforces our singleton pattern, meaning there can only ever be one instance of a GameManager.
-				Destroy(gameObject);	
-			
 			//Sets this to not be destroyed when reloading scene
 			DontDestroyOnLoad(gameObject);
 			

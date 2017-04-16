@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-namespace Completed
+namespace TimeLords
 {
 	//Enemy inherits from MovingObject, our base class for objects that can move, Player also inherits from this.
 	public class Enemy : MovingObject
@@ -21,7 +21,7 @@ namespace Completed
 		{
 			//Register this enemy with our instance of GameManager by adding it to a list of Enemy objects. 
 			//This allows the GameManager to issue movement commands.
-			GameManager.instance.AddEnemyToList (this);
+			GameManager.Instance.AddEnemyToList (this);
 			
 			//Get and store a reference to the attached Animator component.
 			animator = GetComponent<Animator> ();
