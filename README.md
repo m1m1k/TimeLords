@@ -1,17 +1,19 @@
 # TimeLords
 Journey to a far away land as we embark on the first history making jump through time.
 
-# CONCEPT
-A graphical strategy Rougelike RPG attempting to follow D20 rules, adding graphics, and interesting mechanics.
+## CONCEPT
+A *graphical* strategy Rougelike RPG attempting to follow D20 rules, adding graphics, and interesting mechanics.
 Rather than invent a mythical world, we'll be traveling back through time to the ancient Roman Empire.
 Players will achieve greatness or die trying while being immersed in thrilling historical fiction.
 
-## CHAPTER 0 : INTRO : BEFORE I left Earth - the TEST
-OVERVIEW: you are about to become the first time traveller in the world
-Little do you know that you will inevitably get stuck in the Ancient past.
-You'll have to battle your way BACK TO THE FUTURE or figure out how to survive here in the past.
+
+## CHAPTER 0 : BEFORE I left Earth...
+*OVERVIEW: you are about to become the first time traveller in the world.
+ Little do you know that you will inevitably get stuck in the Ancient past.
+You'll have to battle your way *BACK TO THE FUTURE* or figure out how to survive here in the past.*
 
 ---
+
 *Greetings time traveller recruits!*
 The interplanetary council has prepared some rigorous tests for you before you delve into the deepest mysteries of the future.
 The council has decided that since the galaxy's top minds are not in agreement about how going back in time may alter our present course,
@@ -31,23 +33,50 @@ We've decided to use the energy of our closest neighbor star Andromeda,
 which will be totally wiped out and hopefully not turn into a black hole and kill us all.
 Trials are highly contested because of potential time-space tremors, possible creation of dark matter or black holes, 
 ripping space time, wiping out the human race, Paradoxes, etc.
+However, we feel that the benefits could outweigh the disasterou-, ahem, the consequences.
 You have been randomly selected from all applicants and I see from your application that you:
 1. Once ate chicken so good it made you slap your mama in the neck?
 2. Once won a lard eating contest, then realized it wasn't lard?
 3. Believe a spiritual voice tells you to do strange strange things?
 4. Habitually watch cat videos from dawn until dusk?
 
-... (Character creation)
+... (Character creation happens here - TBD maybe not so silly?)
 
+---
 
 * The First trial run is conducted:
 This will be a trial run only.  We will jump you 3 minutes into the future.  
 Since it's so short, the energy required is quite a bit less, 
-and we're planning to deplete the earth's nuclear arsenal all at once, so it'll be two birds with one stone.
+and we're planning to use some of the earth's nuclear arsenal, 
+so it'll be two birds with one stone.
 Keeping around old plutonium was always a bad idea anyways, 
-but now we'll have world peace and we will be crossing into a new frontier.
-"I hope this works..."
+but now maybe we'll be one step closer to world peace and we will be crossing into a new frontier.
+Besides, all the aliens we've met so far use Fusion cannons and Tritanium alloys 
+so the nukes wouldn't do much good against them anyways.
 
+
+"I hope this works..."
+*crosses fingers*
+
+You sit back in the cockpit, gripping the seat tightly. Your heart races.
+The lights of the craft surge as power is pumped into them.
+The plasma engine whirrs to life and you feel the infrasonic vibrations begin to vibrate your chest cavity.
+All the lights in the room suddenly get extremely bright.  
+A low, bassy metalic humming now enters the range of human hearing, now whispering, now roaring and
+drowning out the noise of the technicians and crowd who has gathered to watch the event.
+Power surges all around you.  Electric arcs spider their way around the landing platform.
+Blue light flashes, then white light engulfs the room, and a thousand pounds of pressure 
+suddenly seek to crush you with G-forces as you feel you are being sucked down a drain.
+You try to call out, but it does no good.  You are pressed back into the padded seat.
+With muscles straining, you fight to barely raise your head against the forces.
+Professor Turbine is waving his arms excitedly as if something is wrong.
+Now he's cupping his hands around his mouth and trying to yell something.
+Man full?  Trample?  Candle?
+Ah, it's *cancel*.  As in, cancel the experiment, cancel the flight.
+You look down at the control board and in the bright white light everything looks wrong.
+You could've sworn that the date was supposed to be {TODAY}, 
+but now the year is spinning like a slot machine.
+With effort, you reach out your hand slowly towards the large red "ABORT" button. 
 
 ### ZAP ###
 ## POOF ##
