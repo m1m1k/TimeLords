@@ -5,7 +5,10 @@ Journey to a far away land as we embark on the first history making jump through
 A *graphical* strategy Rougelike RPG attempting to follow D20 rules, adding graphics, and interesting mechanics.
 Rather than invent a mythical world, we'll be traveling back through time to the ancient Roman Empire.
 Players will achieve greatness or die trying while being immersed in thrilling historical fiction.
-
+Game Engine: Unity3D, C#
+2.5D top down style 2D sprites => pokemon/fftactics/original sid meyers civilization style.
+Textual style will be gritty, satirical, and humorous (hopefully).  
+Graphics will be Bright, colorful, and the ridiculous yet serious world will contrast character's humour-as-a-coping strategy, and nonchalance.  
 
 ## CHAPTER 0 : BEFORE I left Earth...
 *OVERVIEW: you are about to become the first time traveller in the world.
@@ -31,9 +34,9 @@ If you can, bring us back something from the future that might help advance our 
 Time travel requires an enormous amount of energy to fold space time.  
 We've decided to use the energy of our closest neighbor star Andromeda, 
 which will be totally wiped out and hopefully not turn into a black hole and kill us all.
-Trials are highly contested because of potential time-space tremors, possible creation of dark matter or black holes, 
+Trials are highly contested because of potential time-space tremors, possible creation of anti matter rifts or black holes, 
 ripping space time, wiping out the human race, Paradoxes, etc.
-However, we feel that the benefits could outweigh the disasterou-, ahem, the consequences.
+However, we feel that the benefits could outweigh the probable disasterou-, ahem, the consequences.
 You have been randomly selected from all applicants and I see from your application that you:
 1. Once ate chicken so good it made you slap your mama in the neck?
 2. Once won a lard eating contest, then realized it wasn't lard?
@@ -77,22 +80,35 @@ You look down at the control board and in the bright white light everything look
 You could've sworn that the date was supposed to be {TODAY}, 
 but now the year is spinning like a slot machine.
 With effort, you reach out your hand slowly towards the large red "ABORT" button. 
+...
+Almost there.  Your eyes bulge out of their sockets as 10,000 pounds of pressure squeezes you like a rotten lemon.
 
 ### ZAP ###
 ## POOF ##
 # BIFF #
+...
+Your finger trembles as every muscle in your body strives to push out.
+You finally barely brush open the case overtop button...
 ### ZAP ###
 ## POOF ##
 ## POOF ##
-# HISS #
-
+# HISSssssssssssssss...... #
+... You pass out.
 ### ZAP ###
 
 
-## CHAPTER 1 : LANDFALL - survival of the skittisht
+
+
+
+## CHAPTER 1 : LANDFALL, survival
 *Well that was exciting!*
-It seems that the front half of your craft is now half embedded in bedrock.
-The readouts of your ship display flash a few times, then go dark.
+I guess it must have worked, since you are no longer in the test lab.
+Your body aches all over, and a trickle of blood runs down from the corner of your nose.
+You seem to be inside a cave.
+The front half of your craft is now half embedded in bedrock.  
+That's not going to be easy to dig out.
+The readouts of your ship display flash a few times, then go dark. 
+The power cell was probably cut by the rocks.
 Well, crap.
 
 Thankfully, you had a few personal effects in your backpack and pockets.  
@@ -101,7 +117,9 @@ And some old MRE rations which just happened to be in your coat.
 
 *You find yourself cold and alone in a dark, wet place.*
 
-Now, to find some future people and help me get out of here.
+Now, to find some future people and help me get out of here...
+
+{THUS BEGINS YOUR ADVENTURE!}
 
 ------------------------------
 
