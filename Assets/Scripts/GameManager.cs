@@ -7,33 +7,21 @@ namespace TimeLords
     using System.Collections.Generic;		//Allows us to use Lists. 
 	using UnityEngine.UI;					//Allows us to use UI.
 	
-	public class GameManager : MonoBehaviour
-	{
-        /// <summary>
-        /// Make GameManager a SingleTon
-        /// </summary>
-        public static GameManager Instance = null;
-
+	public class GameManager : UnitySingleton<GameManager>
+    {
         public float levelStartDelay = 2f;						//Time to wait before starting level, in seconds.
 		public float turnDelay = 0.1f;							//Delay between each Player turn.
 		public int playerFoodPoints = 100;                      //Starting value for Player food points.
 
-        
-
 		[HideInInspector] public bool playersTurn = true;       //Boolean to check if it's players turn, hidden in inspector but public.
 
-        public enum ScriptName
-        {
-            BoardManager,
-            SpriteManager,
-            SoundManager,
-        }
-        public Dictionary<ScriptName, MonoBehaviour> Scripts = new Dictionary<ScriptName, MonoBehaviour>();
-		
 		private Text levelText;									//Text to display current level number.
 		private GameObject levelImage;							//Image to block out level as levels are being set up, background for levelText.
+
+        // Attached Scripts
 		private BoardManager boardScript;						//Store a reference to our BoardManager which will set up the level.
         private SpriteManager SpriteManagerScript;
+
         private int level = 1;									//Current level number, expressed in game as "Day 1".
 		private List<Enemy> enemies;							//List of all Enemy units, used to issue them move commands.
 		private bool enemiesMoving;								//Boolean to check if enemies are moving.
@@ -42,17 +30,14 @@ namespace TimeLords
         //Awake is always called before any Start functions
         void Awake()
         {
-            Extensions.AssureSingletonAndDestroyExtras(ref Instance, this);
-
             //Sets this to not be destroyed when reloading scene
-            DontDestroyOnLoad(gameObject);
+            Persist = true;
 			
 			//Assign enemies to a new List of Enemy objects.
 			enemies = new List<Enemy>();
 			
 			//Get a component reference to the attached BoardManager script
 			boardScript = GetComponent<BoardManager>();
-
             SpriteManagerScript = GetComponent<SpriteManager>();
 
             //Call the InitGame function to initialize the first level 

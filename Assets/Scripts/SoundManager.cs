@@ -3,10 +3,8 @@ using System.Collections;
 
 namespace TimeLords
 {
-	public class SoundManager : MonoBehaviour 
-	{
-        public static SoundManager Instance = null;
-
+	public class SoundManager : UnitySingleton<SoundManager>
+    {
         public AudioSource efxSource;					//Drag a reference to the audio source which will play the sound effects.
 		public AudioSource musicSource;					//Drag a reference to the audio source which will play the music.
 		public float lowPitchRange = .95f;				//The lowest a sound effect will be randomly pitched.
@@ -15,32 +13,8 @@ namespace TimeLords
 		
 		void Awake ()
         {
-            Extensions.AssureSingletonAndDestroyExtras(ref Instance, this);
-            //InsureOnlyOneInstance(ref Instance, this);
-
-            //Set SoundManager to DontDestroyOnLoad so that it won't be destroyed when reloading our scene.
-            DontDestroyOnLoad(gameObject);
+            Persist = true;
         }
-
-        /// <summary>
-        /// Works fine if in same class. mgr must be byref.
-        /// </summary>
-        public void InsureOnlyOneInstance(ref SoundManager mgr, MonoBehaviour obj)
-        {
-            //Check if instance already exists
-            if (mgr == null)
-            {
-                //if not, set instance to this
-                mgr = this;
-            }
-            //If instance already exists and it's not this:
-            else if (mgr != this)
-            {
-                //Then destroy this. This enforces our singleton pattern, meaning there can only ever be one instance of a GameManager.
-                Destroy(obj);
-            }
-        }
-
 
         //Used to play single sound clips.
         public void PlaySingle(AudioClip clip)

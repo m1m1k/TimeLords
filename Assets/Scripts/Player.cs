@@ -54,7 +54,7 @@ namespace TimeLords
 		private void Update ()
 		{
 			//If it's not the player's turn, exit the function.
-			if(GameManager.Instance == null || !GameManager.Instance.playersTurn) return;
+			if(!GameManager.Instance.playersTurn) return;
 			
 			int horizontal = 0;  	//Used to store the horizontal move direction.
 			int vertical = 0;		//Used to store the vertical move direction.
