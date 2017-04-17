@@ -12,16 +12,7 @@ namespace TimeLords
         /// <summary>
         /// Make SpriteManager a SingleTon
         /// </summary>
-        private SpriteManager() { }
-        public static SpriteManager _instance;
-        public SpriteManager Instance
-        {
-            get
-            {
-                GameManager.AssureSingletonAndDestroyExtras<SpriteManager>(_instance, this);
-                return _instance;
-            }
-        }
+        public static SpriteManager Instance = null;
 
         public static Dictionary<string, Sprite[]> dict = new Dictionary<string, Sprite[]>();
         public String SpriteSheetName = "SpriteSheet";
@@ -73,6 +64,8 @@ namespace TimeLords
         // Use this for initialization
         void Awake()
         {
+            Extensions.AssureSingletonAndDestroyExtras(ref Instance, this);
+
             //SetAllSprites(GameManager.Instance.gameObject, SpriteSheetName, SpriteSheetNumSprites);
             DontDestroyOnLoad(gameObject);
         }

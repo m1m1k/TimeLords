@@ -54,7 +54,7 @@ namespace TimeLords
 		private void Update ()
 		{
 			//If it's not the player's turn, exit the function.
-			if(!GameManager.Instance.playersTurn) return;
+			if(GameManager.Instance == null || !GameManager.Instance.playersTurn) return;
 			
 			int horizontal = 0;  	//Used to store the horizontal move direction.
 			int vertical = 0;		//Used to store the vertical move direction.
@@ -144,7 +144,7 @@ namespace TimeLords
 			if (Move (xDir, yDir, out hit)) 
 			{
 				//Call RandomizeSfx of SoundManager to play the move sound, passing in two audio clips to choose from.
-				SoundManager.instance.RandomizeSfx (moveSound1, moveSound2);
+				SoundManager.Instance.RandomizeSfx (moveSound1, moveSound2);
 			}
 			
 			//Since the player has moved and lost food points, check if the game has ended.
@@ -193,7 +193,7 @@ namespace TimeLords
 				foodText.text = "+" + pointsPerFood + " Food: " + food;
 				
 				//Call the RandomizeSfx function of SoundManager and pass in two eating sounds to choose between to play the eating sound effect.
-				SoundManager.instance.RandomizeSfx (eatSound1, eatSound2);
+				SoundManager.Instance.RandomizeSfx (eatSound1, eatSound2);
 				
 				//Disable the food object the player collided with.
 				other.gameObject.SetActive (false);
@@ -209,7 +209,7 @@ namespace TimeLords
 				foodText.text = "+" + pointsPerSoda + " Food: " + food;
 				
 				//Call the RandomizeSfx function of SoundManager and pass in two drinking sounds to choose between to play the drinking sound effect.
-				SoundManager.instance.RandomizeSfx (drinkSound1, drinkSound2);
+				SoundManager.Instance.RandomizeSfx (drinkSound1, drinkSound2);
 				
 				//Disable the soda object the player collided with.
 				other.gameObject.SetActive (false);
@@ -252,10 +252,10 @@ namespace TimeLords
 			if (food <= 0) 
 			{
 				//Call the PlaySingle function of SoundManager and pass it the gameOverSound as the audio clip to play.
-				SoundManager.instance.PlaySingle (gameOverSound);
+				SoundManager.Instance.PlaySingle (gameOverSound);
 				
 				//Stop the background music.
-				SoundManager.instance.musicSource.Stop();
+				SoundManager.Instance.musicSource.Stop();
 				
 				//Call the GameOver function of GameManager.
 				GameManager.Instance.GameOver ();

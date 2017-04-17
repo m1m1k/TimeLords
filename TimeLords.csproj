@@ -80,6 +80,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\BoardManager.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
+    <Compile Include="Assets\Scripts\Extensions.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Loader.cs" />
     <Compile Include="Assets\Scripts\MovingObject.cs" />
@@ -88,15 +89,6 @@
     <Compile Include="Assets\Scripts\SoundManager.cs" />
     <Compile Include="Assets\Scripts\SpriteManager.cs" />
     <Compile Include="Assets\Scripts\Wall.cs" />
-    <Compile Include="Assets\Scripts_Custom\BoardManager.cs" />
-    <Compile Include="Assets\Scripts_Custom\Creature.cs" />
-    <Compile Include="Assets\Scripts_Custom\Extensions.cs" />
-    <Compile Include="Assets\Scripts_Custom\GameManager.cs" />
-    <Compile Include="Assets\Scripts_Custom\Loader.cs" />
-    <Compile Include="Assets\Scripts_Custom\ModifyTerrain.cs" />
-    <Compile Include="Assets\Scripts_Custom\MovingObject.cs" />
-    <Compile Include="Assets\Scripts_Custom\Player.cs" />
-    <Compile Include="Assets\Scripts_Custom\SoundManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Fonts\OFL.txt" />

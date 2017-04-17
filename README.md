@@ -9,6 +9,7 @@ Game Engine: Unity3D, C#
 2.5D top down style 2D sprites => pokemon/fftactics/original sid meyers civilization style.
 Textual style will be gritty, satirical, and humorous (hopefully).  
 Graphics will be Bright, colorful, and the ridiculous yet serious world will contrast character's humour-as-a-coping strategy, and nonchalance.  
+Platform Target(s): Phase 1: PC, iPhone, Android
 
 ## CHAPTER 0 : BEFORE I left Earth...
 *OVERVIEW: you are about to become the first time traveller in the world.

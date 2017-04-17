@@ -12,8 +12,7 @@ namespace TimeLords
         /// <summary>
         /// Make GameManager a SingleTon
         /// </summary>
-        private GameManager() { }
-        public static GameManager Instance { get; set; }
+        public static GameManager Instance = null;
 
         public float levelStartDelay = 2f;						//Time to wait before starting level, in seconds.
 		public float turnDelay = 0.1f;							//Delay between each Player turn.
@@ -21,35 +20,29 @@ namespace TimeLords
 
         
 
-		[HideInInspector] public bool playersTurn = true;		//Boolean to check if it's players turn, hidden in inspector but public.
-		
+		[HideInInspector] public bool playersTurn = true;       //Boolean to check if it's players turn, hidden in inspector but public.
+
+        public enum ScriptName
+        {
+            BoardManager,
+            SpriteManager,
+            SoundManager,
+        }
+        public Dictionary<ScriptName, MonoBehaviour> Scripts = new Dictionary<ScriptName, MonoBehaviour>();
 		
 		private Text levelText;									//Text to display current level number.
 		private GameObject levelImage;							//Image to block out level as levels are being set up, background for levelText.
 		private BoardManager boardScript;						//Store a reference to our BoardManager which will set up the level.
-		private int level = 1;									//Current level number, expressed in game as "Day 1".
+        private SpriteManager SpriteManagerScript;
+        private int level = 1;									//Current level number, expressed in game as "Day 1".
 		private List<Enemy> enemies;							//List of all Enemy units, used to issue them move commands.
 		private bool enemiesMoving;								//Boolean to check if enemies are moving.
 		private bool doingSetup = true;                         //Boolean to check if we're setting up board, prevent Player from moving during setup.
 
-        public static T AssureSingletonAndDestroyExtras<T>(T instance, T obj) where T : MonoBehaviour
-        {
-            if (instance == null)
-            {
-                instance = obj;
-            }
-            else if (!instance.Equals(obj))
-            {
-                Destroy(obj.gameObject);
-                Debug.LogWarning("Destroyed nth instance of game Object.");
-            }
-            return instance;
-        }
-
         //Awake is always called before any Start functions
         void Awake()
-		{
-            AssureSingletonAndDestroyExtras<GameManager>(Instance, this);
+        {
+            Extensions.AssureSingletonAndDestroyExtras(ref Instance, this);
 
             //Sets this to not be destroyed when reloading scene
             DontDestroyOnLoad(gameObject);
@@ -59,9 +52,11 @@ namespace TimeLords
 			
 			//Get a component reference to the attached BoardManager script
 			boardScript = GetComponent<BoardManager>();
-			
-			//Call the InitGame function to initialize the first level 
-			InitGame();
+
+            SpriteManagerScript = GetComponent<SpriteManager>();
+
+            //Call the InitGame function to initialize the first level 
+            InitGame();
 		}
 		
 		//This is called each time a scene is loaded.
@@ -98,8 +93,7 @@ namespace TimeLords
 			enemies.Clear();
 			
 			//Call the SetupScene function of the BoardManager script, pass it current level number.
-			boardScript.SetupScene(level);
-			
+			boardScript.SetupScene(level);			
 		}
 		
 		

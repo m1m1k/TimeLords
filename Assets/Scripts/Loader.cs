@@ -18,7 +18,7 @@ namespace TimeLords
 				Instantiate(gameManager);
 			
 			//Check if a SoundManager has already been assigned to static variable GameManager.Instance or if it's still null
-			if (SoundManager.instance == null)
+			if (SoundManager.Instance == null)
 				
 				//Instantiate SoundManager prefab
 				Instantiate(soundManager);
