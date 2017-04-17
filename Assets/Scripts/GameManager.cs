@@ -12,15 +12,8 @@ namespace TimeLords
         /// <summary>
         /// Make GameManager a SingleTon
         /// </summary>
-        private static readonly Lazy<GameManager> _mySingleton = new Lazy<GameManager>(() => new GameManager());
         private GameManager() { }
-        public static GameManager Instance
-        {
-            get
-            {
-                return _mySingleton.Value;
-            }
-        }
+        public static GameManager Instance { get; set; }
 
         public float levelStartDelay = 2f;						//Time to wait before starting level, in seconds.
 		public float turnDelay = 0.1f;							//Delay between each Player turn.
@@ -37,15 +30,29 @@ namespace TimeLords
 		private int level = 1;									//Current level number, expressed in game as "Day 1".
 		private List<Enemy> enemies;							//List of all Enemy units, used to issue them move commands.
 		private bool enemiesMoving;								//Boolean to check if enemies are moving.
-		private bool doingSetup = true;							//Boolean to check if we're setting up board, prevent Player from moving during setup.
-		
-		
-		
-		//Awake is always called before any Start functions
-		void Awake()
+		private bool doingSetup = true;                         //Boolean to check if we're setting up board, prevent Player from moving during setup.
+
+        public static T AssureSingletonAndDestroyExtras<T>(T instance, T obj) where T : MonoBehaviour
+        {
+            if (instance == null)
+            {
+                instance = obj;
+            }
+            else if (!instance.Equals(obj))
+            {
+                Destroy(obj.gameObject);
+                Debug.LogWarning("Destroyed nth instance of game Object.");
+            }
+            return instance;
+        }
+
+        //Awake is always called before any Start functions
+        void Awake()
 		{
-			//Sets this to not be destroyed when reloading scene
-			DontDestroyOnLoad(gameObject);
+            AssureSingletonAndDestroyExtras<GameManager>(Instance, this);
+
+            //Sets this to not be destroyed when reloading scene
+            DontDestroyOnLoad(gameObject);
 			
 			//Assign enemies to a new List of Enemy objects.
 			enemies = new List<Enemy>();

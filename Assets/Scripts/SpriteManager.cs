@@ -12,13 +12,14 @@ namespace TimeLords
         /// <summary>
         /// Make SpriteManager a SingleTon
         /// </summary>
-        private static readonly Lazy<SpriteManager> _mySingleton = new Lazy<SpriteManager>(() => new SpriteManager());
         private SpriteManager() { }
-        public static SpriteManager Instance
+        public static SpriteManager _instance;
+        public SpriteManager Instance
         {
             get
             {
-                return _mySingleton.Value;
+                GameManager.AssureSingletonAndDestroyExtras<SpriteManager>(_instance, this);
+                return _instance;
             }
         }
 
@@ -72,7 +73,7 @@ namespace TimeLords
         // Use this for initialization
         void Awake()
         {
-            SetAllSprites(GameManager.Instance.gameObject, SpriteSheetName, SpriteSheetNumSprites);
+            //SetAllSprites(GameManager.Instance.gameObject, SpriteSheetName, SpriteSheetNumSprites);
             DontDestroyOnLoad(gameObject);
         }
 
